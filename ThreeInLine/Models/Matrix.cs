@@ -45,6 +45,9 @@ namespace ThreeInLine.Models
             }
         }
 
+        public int Columns { get => _columns; }
+        public int Rows { get => _rows; }
+
         public Matrix(int columns, int rows)
         {
             _columns = columns;
