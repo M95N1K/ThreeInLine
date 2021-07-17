@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeInLine", "ThreeInLine\ThreeInLine.csproj", "{9C9E6DFB-D4C0-4B4B-B86A-E646C10C5054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeInLine", "ThreeInLine\ThreeInLine.csproj", "{9C9E6DFB-D4C0-4B4B-B86A-E646C10C5054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{951227F0-ADDF-4D46-BD92-C4763E8D8A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTests", "Tests\ConsoleApp1\ConsoleTests.csproj", "{F02F829D-27B1-4C1F-A939-F99EA19E73D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{9C9E6DFB-D4C0-4B4B-B86A-E646C10C5054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C9E6DFB-D4C0-4B4B-B86A-E646C10C5054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C9E6DFB-D4C0-4B4B-B86A-E646C10C5054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F02F829D-27B1-4C1F-A939-F99EA19E73D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F02F829D-27B1-4C1F-A939-F99EA19E73D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F02F829D-27B1-4C1F-A939-F99EA19E73D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F02F829D-27B1-4C1F-A939-F99EA19E73D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F02F829D-27B1-4C1F-A939-F99EA19E73D4} = {951227F0-ADDF-4D46-BD92-C4763E8D8A23}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {288C4189-9671-4EB9-A86E-24F048F7C683}
