@@ -16,19 +16,43 @@ namespace Tests
 
         static void TestTIL_Logics()
         {
-            int x = 3;
-            int y = 2;
-            TIL_Logics matrix = new TIL_Logics(x, y);
+            int x = 10;
+            int y = 20;
+            int elements = 3;
+            TIL_Logics matrix = new TIL_Logics(x, y,elements);
+            matrix.OnDestruction += Matrix_OnDestruction;
 
+            PrintMatrix(matrix);
 
-            for (int i = 0; i < y; i++)
+            Console.WriteLine();
+            matrix.DestructionAllScreen();
+
+            PrintMatrix(matrix);
+
+            Console.WriteLine();
+            matrix.Fall();
+
+            PrintMatrix(matrix);
+        }
+
+        private static void Matrix_OnDestruction(int destructionElement)
+        {
+            Console.WriteLine(destructionElement);
+        }
+
+        static void PrintMatrix(Matrix matrix)
+        {
+            ConsoleColor tmp = Console.ForegroundColor;
+            for (int i = 0; i < matrix.Rows; i++)
             {
-                for (int k = 0; k < x; k++)
+                for (int k = 0; k < matrix.Columns; k++)
                 {
-                    Console.Write($"{matrix[k, i]} ");
+                    Console.ForegroundColor = (ConsoleColor)(matrix[k, i] / 10)+2;
+                    Console.Write($"{matrix[k, i],2} ");
                 }
                 Console.WriteLine();
             }
+            Console.ForegroundColor = tmp;
         }
 
         static void TestMatrix()
@@ -41,14 +65,7 @@ namespace Tests
             matrix[1, 0] = 4;
             matrix[2, 0] = 3;
 
-            for (int i = 0; i < y; i++)
-            {
-                for (int k = 0; k < x; k++)
-                {
-                    Console.Write($"{matrix[k, i]} ");
-                }
-                Console.WriteLine();
-            }
+            PrintMatrix(matrix);
         }
     }
 }
